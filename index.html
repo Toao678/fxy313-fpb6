@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>Aviator</title>
+<script>
+    // 防盗链：检查访客是从哪里来的
+    var referrer = document.referrer;
+    var allowedDomain = "d8p3.my"; // ⚠️ 一定要替换成你的导航网域名（不要带 http:// 或 https://）
+
+    // 如果来源里没有你的导航网域名，直接强制跳回导航网
+    if (referrer.indexOf(allowedDomain) === -1) {
+        window.location.href = "https://" + allowedDomain;
+    }
+</script>
 <style>
   *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
   :root{
